@@ -1,0 +1,345 @@
+/* ========================= */
+/* Global Styles */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body,
+nav,
+header,
+section,
+footer,
+button,
+input,
+a{
+    transition:all 0.4s ease;
+}
+
+/* ========================= */
+/* Light Theme */
+/* ========================= */
+
+.light{
+    background:#f5f7fb;
+    color:#333;
+    min-height:100vh;
+}
+
+/* ========================= */
+/* Dark Theme */
+/* ========================= */
+
+.dark{
+    background:#0f172a;
+    color:#e2e8f0;
+    min-height:100vh;
+}
+
+/* ========================= */
+/* Navigation */
+/* ========================= */
+
+.light nav{
+    background:#2563eb;
+    padding:18px;
+    text-align:center;
+}
+
+.dark nav{
+    background:#111827;
+    padding:18px;
+    text-align:center;
+}
+
+nav a{
+    text-decoration:none;
+    margin:0 20px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.light nav a{
+    color:white;
+}
+
+.dark nav a{
+    color:#60a5fa;
+}
+
+.light nav a:hover{
+    color:#ffd700;
+}
+
+.dark nav a:hover{
+    color:#c084fc;
+}
+
+/* ========================= */
+/* Header */
+/* ========================= */
+
+.light header{
+    background:linear-gradient(to right,#2563eb,#1e40af);
+    color:white;
+    padding:60px;
+    text-align:center;
+}
+
+.dark header{
+    background:linear-gradient(to right,#312e81,#1e293b);
+    color:white;
+    padding:60px;
+    text-align:center;
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+header h3{
+    margin-bottom:10px;
+    font-weight:normal;
+}
+
+header p{
+    font-size:18px;
+}
+
+/* ========================= */
+/* Sections */
+/* ========================= */
+
+.light section{
+    width:80%;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.dark section{
+    width:80%;
+    margin:30px auto;
+    background:#1e293b;
+    color:#f1f5f9;
+    padding:30px;
+    border-radius:12px;
+    border:1px solid #334155;
+    box-shadow:0px 8px 20px rgba(0,0,0,0.4);
+}
+
+.light section h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.dark section h2{
+    color:#60a5fa;
+    margin-bottom:15px;
+}
+
+section p{
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* ========================= */
+/* Lists */
+/* ========================= */
+
+ul{
+    margin-top:15px;
+    padding-left:20px;
+}
+
+li{
+    margin:10px 0;
+    font-size:18px;
+}
+
+/* ========================= */
+/* Input */
+/* ========================= */
+
+.light input{
+    width:100%;
+    padding:12px;
+    margin:20px 0;
+    border:1px solid gray;
+    border-radius:8px;
+    font-size:16px;
+    background:white;
+    color:black;
+}
+
+.dark input{
+    width:100%;
+    padding:12px;
+    margin:20px 0;
+    border:1px solid #475569;
+    border-radius:8px;
+    font-size:16px;
+    background:#334155;
+    color:white;
+}
+
+.dark input::placeholder{
+    color:#cbd5e1;
+}
+
+/* ========================= */
+/* Buttons */
+/* ========================= */
+
+.light button{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.light button:hover{
+    background:#1d4ed8;
+}
+
+.dark button{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    background:#7c3aed;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.dark button:hover{
+    background:#9333ea;
+}
+
+/* ========================= */
+/* Footer */
+/* ========================= */
+
+.light footer{
+    margin-top:40px;
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.dark footer{
+    margin-top:40px;
+    background:#111827;
+    color:#cbd5e1;
+    text-align:center;
+    padding:20px;
+}
+
+/* ============================= */
+/* Repository Loading Spinner */
+/* ============================= */
+
+.spinner-wrapper {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Circular Loading Animation */
+
+.loading-circle {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #dbeafe;
+    border-top: 6px solid #2563eb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Spinner Rotation */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Loading Text */
+
+.loading-text {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Repository container */
+
+.repo-container {
+    width: 80%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Individual repository box */
+
+.repo-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Repository name */
+
+.repo-card h3 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    word-break: break-word;
+}
+
+/* Repository link */
+
+.repo-card a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hover effect */
+
+.repo-card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.repo-card a:hover {
+    text-decoration: underline;
+}
